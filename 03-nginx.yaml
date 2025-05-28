@@ -1,6 +1,6 @@
 - name: Deploy nginx
   hosts: local
-  bocome: yes
+  become: yes
   tasks:
     - name: install nginx server 
       ansible.builtin.package:
