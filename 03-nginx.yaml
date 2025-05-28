@@ -1,0 +1,15 @@
+- name: Deploy nginx
+  hosts: local
+  bocome: yes
+  tasks:
+    - name: install nginx server 
+      ansible.builtin.package:
+        name: nginx
+        state: present
+
+
+- name: start nginx
+  ansible.builtin.services:
+    name: nginx
+    state: start
+    enabled: yes
